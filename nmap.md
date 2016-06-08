@@ -1,4 +1,5 @@
-### Quick discovery scan
+## Quick discovery scan
+
 ~~~
 sudo nmap -n -P0 -p80 -iL hosts.lst --script \
 http-apache-server-status,\
@@ -20,7 +21,8 @@ http-xssed\
  -oA nmap_tcp_80_with_scripts
 ~~~
 
-### Quick validation/exploitation scan
+## Quick validation/exploitation scan
+
 ~~~
 sudo nmap -n -P0 -p80 -iL hosts.lst --script \
 http-csrf,\
@@ -39,7 +41,8 @@ http-vuln-cve2014-8877\
  -oA nmap_tcp_80_with_scripts
 ~~~
 
-### Full crazy scan with huge overheads
+## Full crazy scan with huge overheads
+
 ~~~
 sudo nmap -n -P0 -p80,443 -iL hosts.lst --script \
 http-enum,\
