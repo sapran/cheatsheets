@@ -11,7 +11,7 @@ su
 mkdir -p /data/data/de.robv.android.xposed.installer/conf/
 echo 0x98 > /data/data/de.robv.android.xposed.installer/conf/jit_reset_offset 
 chmod 664 /data/data/de.robv.android.xposed.installer/conf/jit_reset_offset
-~~
+~~~
 
 Now you can run Xposed installer.
 
