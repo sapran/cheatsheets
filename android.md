@@ -1,5 +1,10 @@
 # Android pentesting
 
+## Install Android-x86 emulated image in VirtualBox
+
+1. Download Android image from [http://www.osboxes.org/android-x86/](http://www.osboxes.org/android-x86/). Version 4.4-r4 is recommended for the rest to work.
+1. (Optional) Configure portrait screen orientation using this [step by step instruction](http://stackoverflow.com/questions/6202342/switch-android-x86-screen-resolution/8273560).
+
 ## Xposed install in x86 emulator
 
 Download and install Xposed installer but do not run it!
