@@ -7,7 +7,7 @@ AuthUserFile /var/www/html/.htpasswd
 Require valid-user
 order deny,allow
 deny from all
-allow from 92.60.187.145
+allow from 0.0.0.0
 
 # Use Reqrite to block most spiders
 RewriteEngine on
