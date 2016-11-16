@@ -1,8 +1,10 @@
-# Make xsshunter ~~great again!~~ send Slack notifications
+# Make XSS Hunter ~~great again!~~ send Slack notifications
 
-1. Create a Slack bot for your team following [this tutorial](https://api.slack.com/bot-users)
+0. [Install XSS Hunter](https://thehackerblog.com/xss-hunter-is-now-open-source-heres-how-to-set-it-up/). It's awesome. 
 
-1. Add the following to `config.yaml`:
+1. Create a Slack bot for your team as described in [this tutorial](https://api.slack.com/bot-users)
+
+2. Add the following to `config.yaml`:
 
 ~~~
 slack_api_key: <YOUR SLACK BOT API KEY>
