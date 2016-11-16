@@ -1,4 +1,4 @@
-# Make xsshunter -great again!- send Slack notifications
+# Make xsshunter ~~great again!~~ send Slack notifications
 
 1. Create a Slack bot for your team following [this tutorial](https://api.slack.com/bot-users)
 
