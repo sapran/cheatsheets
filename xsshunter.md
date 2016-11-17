@@ -4,7 +4,7 @@
 
 1. Create a Slack bot for your team as described in [this tutorial](https://api.slack.com/bot-users)
 
-1. Add the following to `config.yaml`:
+1. Add the following to `config.yaml`. Start `send_to` with # to post to channel or with @ to send direct message to a user.
 
     ~~~
     slack_api_key: <YOUR SLACK BOT API KEY>
@@ -15,7 +15,7 @@
 
     ~~~
     diff --git a/api/apiserver.py b/api/apiserver.py
-    index 336c09f..5b34a23 100755
+    index 336c09f..63c74c4 100755
     --- a/api/apiserver.py
     +++ b/api/apiserver.py
     @@ -26,6 +26,8 @@ from models.request_record import InjectionRequest
@@ -36,7 +36,7 @@
              return session.query( User ).filter_by( domain=subdomain ).first()
 
      def data_uri_to_file( data_uri ):
-    @@ -247,6 +251,21 @@ def send_email( to, subject, body, attachment_file, body_type="html" ):
+    @@ -247,6 +251,26 @@ def send_email( to, subject, body, attachment_file, body_type="html" ):
                  auth=("api", settings["mailgun_api_key"] ),
                  callback=email_sent_callback)
 
@@ -53,12 +53,17 @@
     +    slack_message = slack_message + '\n\t*DOM:*\n```' + injection_data['dom'] + '```'
     +    slack_message = slack_message + '\n\t*Origin:* ' + injection_data['origin']
     +    slack_message = slack_message + '\n\t*Screenshot:* https://' + settings['domain'] + '/' + injection_data['screenshot']
-    +    slack.chat.post_message(slack_send_to, slack_message)
+    +    if slack_send_to[0] == '#':
+    +       slack.chat.post_message(slack_send_to, slack_message)
+    +    elif slack_send_to[0] == '@':
+    +       slack.chat.post_message(slack_send_to, slack_message, as_user=True)
+    +    else:
+    +       slack.chat.post_message('#general', slack_message)
     +
      def send_javascript_pgp_encrypted_callback_message( email_data, email ):
          return send_email( email, "[XSS Hunter] XSS Payload Message (PGP Encrypted)", email_data, False, "text" )
 
-    @@ -408,6 +427,7 @@ class CallbackHandler(BaseHandler):
+    @@ -408,6 +432,7 @@ class CallbackHandler(BaseHandler):
                  injection_db_record = record_callback_in_database( callback_data, self )
                  self.logit( "User " + owner_user.username + " just got an XSS callback for URI " + injection_db_record.vulnerable_page )
 
@@ -66,7 +71,7 @@
                  if owner_user.email_enabled:
                      send_javascript_callback_message( owner_user.email, injection_db_record )
                  self.write( '{}' )
-    @@ -681,5 +701,5 @@ if __name__ == "__main__":
+    @@ -681,5 +706,5 @@ if __name__ == "__main__":
          tornado.options.parse_command_line(args)
          Base.metadata.create_all(engine)
          app = make_app()
