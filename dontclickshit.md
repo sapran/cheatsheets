@@ -1,6 +1,6 @@
 # Як не стати кібер-жертвою
 
-Постійна адреса: https://github.com/sapran/cheatsheets/dontclickshit.md
+Постійна адреса: https://github.com/sapran/cheatsheets/blob/master/dontclickshit.md
 
 ## Зміст
 
