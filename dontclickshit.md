@@ -68,12 +68,12 @@
 
 1. Виберіть міцну основу, скажімо, пасфразу `w3llD0nem8'`
 2. Придумайте спосіб прив'язки ключової фрази до сервісу. Наприклад, просте додавання імені сервера в кінці:
-	`w3llD0nem8'google`
+>	`w3llD0nem8'google`
 Або розщеплення імені сервісу навпіл і додавання на початку та в кінці фрази:
-	`goow3llD0nem8'gle`
-	`glew3llD0nem8'goo`
+>	`goow3llD0nem8'gle`
+>	`glew3llD0nem8'goo`
 3. Не забудьте трохи "перекрутити" отриману фразу, скажімо, змінивши останню букву імені сервісу на цифру, якщо це можливо, і додавши знак оклику або інший спецсимвол.
-	`goow3llD0nem8'gl3!`
+>	`goow3llD0nem8'gl3!`
 
 ### Тримайте пасфрази в секреті
 
@@ -89,16 +89,16 @@
 
 Використовуйте програмне забезпечення для збереження та захисту паролів – парольні менеджери – та виконуйте ці правила:
 
-	0. Генеруйте сильні, випадкові паролі довжиною від 20 символів.
-	1. Переконайтеся, що ваш майстер-пароль, яким ви захищаєте решту паролів, є сильною пасфразою.
-	2. Використовуйте парольний менеджер, який шифрує базу даних перед зберіганням її в хмарі або синхронізації між пристроями по мережі.
-	3. Частіше, бажано автоматично, робіть резервні копії бази даних паролів.
+0. Генеруйте сильні, випадкові паролі довжиною від 20 символів.
+1. Переконайтеся, що ваш майстер-пароль, яким ви захищаєте решту паролів, є сильною пасфразою.
+2. Використовуйте парольний менеджер, який шифрує базу даних перед зберіганням її в хмарі або синхронізації між пристроями по мережі.
+3. Частіше, бажано автоматично, робіть резервні копії бази даних паролів.
 
 :wrench: Прикладами хороших парольних менеджерів є:
 
-	- 1Pasword https://1password.com
-	- KeePass http://keepass.info
-	- Password Safe https://pwsafe.org
+- 1Pasword https://1password.com
+- KeePass http://keepass.info
+- Password Safe https://pwsafe.org
 
 ### Все ще хочете використовувати паролі?
 
@@ -111,11 +111,11 @@
 Більшість поважних онлайн-сервісів підтримують двохфакторну автентифікацію. Увімкніть її за допомогою програмного токена (доступний у Facebook, Twitter, Google і т.д.) або за допомогою одноразового пароля з доставкою по SMS.
 
 :wrench: URL-адреси для налаштування багатофакторної автентифікації популярних веб-сайтів:
-	- Apple https://support.apple.com/en-us/HT204915
-	- Google https://myaccount.google.com/security/signinoptions/two-step-verification
-	- Facebook https://www.facebook.com/settings?tab=security&section=approvals
-	- Twitter https://twitter.com/settings/security
-	- Dropbox https://www.dropbox.com/account/#security
+- Apple https://support.apple.com/en-us/HT204915
+- Google https://myaccount.google.com/security/signinoptions/two-step-verification
+- Facebook https://www.facebook.com/settings?tab=security&section=approvals
+- Twitter https://twitter.com/settings/security
+- Dropbox https://www.dropbox.com/account/#security
 
 :wrench: Широка підбірка сервісів, які підтримують двохфакторну автентифікацію: https://twofactorauth.org
 
@@ -176,8 +176,8 @@ apt update && apt -y upgrade
 
 Вибрати антивірус нелегко: "незалежні" тести більш прихильні до антивірусних вендорів, які в решті решт фінансують ці тестування. Існують, щоправда, більш-менш об'єктивні ревю та результати тестувань.
 
-	- AV-Test.org https://www.av-test.org/en/antivirus/home-windows/
-	- Результати тестування NSS Labs, якщо ви можете їх знайти.
+- AV-Test.org https://www.av-test.org/en/antivirus/home-windows/
+- Результати тестування NSS Labs, якщо ви можете їх знайти.
 
 Робіть резервні копії даних
 
