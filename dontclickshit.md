@@ -101,6 +101,7 @@
 
 Більшість поважних онлайн-сервісів підтримують двохфакторну автентифікацію. Увімкніть її за допомогою програмного токена (доступний у Facebook, Twitter, Google і т.д.) або за допомогою одноразового пароля з доставкою по SMS.
 URL-адреси для налаштування багатофакторної автентифікації популярних веб-сайтів:
+
 	- Apple https://support.apple.com/en-us/HT204915
 	- Google https://myaccount.google.com/security/signinoptions/two-step-verification
 	- Facebook https://www.facebook.com/settings?tab=security&section=approvals
