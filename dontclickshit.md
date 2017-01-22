@@ -327,6 +327,6 @@ apt update && apt -y upgrade
 
 Ви можете поширювати цю пам'ятку, використовувати її у бізнесі, та змінювати на власний розсуд. Це безкоштовно. Посилання на оригінал та автора вітаються.
 
-Якщо у вас є що додати або ви знайшли в тексті помилку, напишіть на :email: sapran@protonmail.com
+Якщо у вас є що додати або ви знайшли в тексті помилку, напишіть на :email: sapran@protonmail.com або [створіть issue](https://github.com/sapran/cheatsheets/issues/new).
 
 Скомпільовано та підготовлено by Vlad Styran, [Berezha Security](https://berezhasecurity.com), https://styran.com
